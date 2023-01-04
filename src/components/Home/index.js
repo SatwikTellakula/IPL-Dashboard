@@ -22,7 +22,7 @@ class Home extends Component {
   getTeamsList = async () => {
     const response = await fetch('https://apis.ccbp.in/ipl')
     const data = await response.json()
-    const updatedTeamsData = data.map(eachTeam => ({
+    const updatedTeamsData = data.teams.map(eachTeam => ({
       name: eachTeam.name,
       id: eachTeam.id,
       teamImageUrl: eachTeam.team_image_url,
