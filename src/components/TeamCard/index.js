@@ -1,7 +1,7 @@
 // Write your code here
 const TeamCard = props => {
-  const {teamsData} = props
-  const {name, teamImageUrl} = teamsData
+  const {teamData} = props
+  const {name, teamImageUrl} = teamData
   return (
     <div className="card-container">
       <img src={teamImageUrl} alt="ipl-team" />
