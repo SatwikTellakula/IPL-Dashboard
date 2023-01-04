@@ -1,0 +1,16 @@
+/* Write your CSS here */
+.bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
+  height: 100vh;
+  background-size: cover;
+}
+.img-specifications {
+  height: 50px;
+  width: 50px;
+}
+.dash-board {
+  display: flex;
+  flex-direction: row;
+}
+.teams-list-container {
+}
