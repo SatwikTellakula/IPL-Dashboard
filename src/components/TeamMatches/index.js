@@ -9,7 +9,7 @@ import LatestMatch from '../LatestMatch'
 import './index.css'
 
 class TeamMatches extends Component {
-  state = {teamData: {}, isLoading: true}
+  state = {teamBannerUrl: '', isLoading: true, latestMatchDetails: []}
 
   componentDidMount() {
     this.getTeamData()
@@ -22,10 +22,15 @@ class TeamMatches extends Component {
 
     const response = await fetch(`https://apis.ccbp.in/ipl/:id`)
     const data = await response.json()
+    this.setState({
+      teamBannerUrl: data.team_banner_url,
+      isLoading: false,
+      latestMatchDetails: data.latest_match_details,
+    })
   }
+
   render() {
-    const teamBannerUrl = data.team_banner_url
-    const latestMatchDetails = data.latest_match_details
+    const {teamBannerUrl, isLoading, latestMatchDetails} = this.state
     return (
       <div>
         <img src={teamBannerUrl} className="teamBanner" />
