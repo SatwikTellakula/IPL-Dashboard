@@ -1,1 +1,17 @@
 /* Write your CSS here */
+.competing-team {
+  width: 150px;
+  height: 150px;
+}
+.latest-match {
+  display: flex;
+  flex-direction: row;
+}
+.competing-container {
+  display: flex;
+  flex-direction: column;
+}
+.innings-container {
+  display: flex;
+  flex-direction: column;
+}
