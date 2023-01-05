@@ -38,3 +38,5 @@ const LatestMatch = props => {
     </div>
   )
 }
+
+export default LatestMatch
